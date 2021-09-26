@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark_grey"
+    android:id="@+id/fragment_movie_detail">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/movie_detail_main_thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="240dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/backgrounds/scenic">
+            </ImageView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="-100dp"
+                app:srcCompat="@drawable/gradient_bg">
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:orientation="vertical"
+                android:layout_marginTop="-230dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"></LinearLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/play_fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    app:fabCustomSize="60dp"
+                    android:src="@drawable/ic_play_arrow">
+                </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/movie_detail_thumbnail"
+                    android:layout_width="100dp"
+                    android:layout_height="130dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="centerCrop"
+                    android:transitionName="sharedName">
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/movie_detail_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:text="Fragment"
+                        android:textColor="@color/orange_1">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:text="Director: "
+                            android:textSize="12sp"
+                            android:textColor="@color/white_grey">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/movie_detail_director"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Christopher Nolan"
+                            android:textSize="12sp"
+                            android:textColor="@color/spotify_white_grey">
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:text="Main Actor: "
+                            android:textSize="12sp"
+                            android:textColor="@color/white_grey">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/movie_detail_main_actor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Leonardo Di Caprio"
+                            android:textSize="12sp"
+                            android:textColor="@color/spotify_white_grey">
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:text="Nation: "
+                            android:textSize="12sp"
+                            android:textColor="@color/white_grey">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/movie_detail_nation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Japan"
+                            android:textSize="12sp"
+                            android:textColor="@color/spotify_white_grey">
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:text="Year: "
+                            android:textSize="12sp"
+                            android:textColor="@color/white_grey">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/movie_detail_year"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="2020"
+                            android:textSize="12sp"
+                            android:textColor="@color/spotify_white_grey">
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:text="Length: "
+                            android:textSize="12sp"
+                            android:textColor="@color/white_grey">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/movie_detail_length"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="150 minutes"
+                            android:textSize="12sp"
+                            android:textColor="@color/spotify_white_grey">
+                        </TextView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textStyle="bold"
+                        android:text="Views: "
+                        android:textSize="12sp"
+                        android:textColor="@color/white_grey">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/movie_detail_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="1000"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/spotify_white_grey">
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Short description"
+                        android:textSize="12sp"
+                        android:textColor="@color/white_grey">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/movie_detail_description"
+                        android:lineSpacingExtra="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Description textView"
+                        android:textSize="12sp"
+                        android:textColor="@color/spotify_white_grey">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <Button
+                    android:id="@+id/button_wish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:text=" Wish List"
+                    android:textSize="12sp"
+                    android:textColor="@color/white_grey"
+                    android:background="@color/dark_grey"
+                    android:drawableTop="@drawable/love1x"
+                    android:drawableTint="@color/white_grey">
+                </Button>
+
+                <Button
+                    android:id="@+id/button_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:text="Like"
+                    android:textSize="12sp"
+                    android:textColor="@color/white_grey"
+                    android:background="@color/dark_grey"
+                    android:drawableTop="@drawable/like1x"
+                    android:drawableTint="@color/white_grey">
+                </Button>
+
+                <Button
+                    android:id="@+id/button_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:text=" Share"
+                    android:textSize="12sp"
+                    android:textColor="@color/white_grey"
+                    android:background="@color/dark_grey"
+                    android:drawableTop="@drawable/shareall1x"
+                    android:drawableTint="@color/white_grey">
+                </Button>
+
+                <Button
+                    android:id="@+id/button_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:text=" Download"
+                    android:textSize="12sp"
+                    android:textColor="@color/white_grey"
+                    android:background="@color/dark_grey"
+                    android:drawableTop="@drawable/download1x"
+                    android:drawableTint="@color/white_grey">
+                </Button>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_similar_movies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:textSize="16sp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@color/dark_grey_5"
+                android:text="Similar movies"
+                android:textStyle="bold"
+                android:textColor="@color/white_grey">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_similar_movies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_comments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="16sp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@color/dark_grey_5"
+                android:text="Comments"
+                android:textStyle="bold"
+                android:textColor="@color/white_grey">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edit_text_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_custom_comment"
+                        android:hint="Type comment here"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/spotify_white_grey"
+                        android:textSize="13sp"></EditText>
+
+                    <Button
+                        android:id="@+id/button_send_comment"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="13sp"
+                        android:padding="15dp"
+                        android:background="@drawable/custom_button_send_comment"
+                        android:drawableTint="@color/spotify_white_grey"
+                        android:drawableRight="@drawable/send1x"
+                        android:textColor="@color/spotify_white_grey"
+                        android:textAllCaps="false">
+                    </Button>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

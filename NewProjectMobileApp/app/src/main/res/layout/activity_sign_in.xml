@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    tools:context=".SignInActivity">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="178dp"
+        android:layout_height="124dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        app:srcCompat="@drawable/fargo_orange_text_logo" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="-20dp"
+        android:textColor="@color/white"
+        android:text="SIGN IN" />
+
+    <EditText
+        android:id="@+id/edit_text_email"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_custom"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:hint="Email"
+        android:textColorHint="@color/spotify_white_grey"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edit_text_password"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_custom"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:hint="Password"
+        android:textColorHint="@color/spotify_white_grey"
+        android:inputType="textPassword"
+        app:passwordToggleEnabled="true"/>
+
+    <Button
+        android:id="@+id/button_normal_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="70dp"
+        android:background="@drawable/button_custom"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:text="Sign In">
+    </Button>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/spotify_white_grey"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Or you can sign in with !" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+
+        <FrameLayout
+            android:id="@+id/frame_layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/sign_in_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/sign_in_button_gg_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                app:backgroundTint="@color/white"
+                app:tint="@null"
+                android:src="@drawable/common_google_signin_btn_icon_light">
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_layout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp">
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/login_button_fb_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:backgroundTint="@color/white"
+                app:backgroundTint="@color/white"
+                app:tint="@null"
+                android:src="@drawable/com_facebook_button_icon_blue">
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_reset_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:text="Reset Password"
+        android:background="@color/dark_grey"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/button_create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:text="Sign Up - Create new Account"
+        android:background="@color/dark_grey"
+        android:textAllCaps="false"/>
+</LinearLayout>

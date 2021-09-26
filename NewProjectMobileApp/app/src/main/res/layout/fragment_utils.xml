@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/dark_grey">
+
+    <FrameLayout
+        android:id="@+id/frame_layout_utils"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_grey">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/custom_utils_element"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/image_view_avatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:foreground="@drawable/custom_avatar"
+                    android:src="@drawable/thebatmanavatar"
+                    android:scaleType="centerCrop">
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/text_view_user_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Phan Le Huy"
+                        android:textColor="@color/white"
+                        android:textSize="14sp">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/text_view_user_email"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="huy17692701@gmail.com"
+                        android:textColor="@color/white"
+                        android:textSize="12sp">
+                    </TextView>
+                </LinearLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floating_action_button_user_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:fabCustomSize="40dp"
+                    android:src="@drawable/list2x">
+                </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            </LinearLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/button_notification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_button_in_account_info"
+                        android:drawableLeft="@drawable/notification2x"
+                        android:drawableRight="@drawable/arrow_right2x"
+                        android:drawableTint="@color/hulu_green_1"
+                        android:textAllCaps="false"
+                        android:text="Notification"
+                        android:textColor="@color/white_grey"
+                        android:textSize="14sp">
+                    </Button>
+
+                    <Button
+                        android:id="@+id/button_find_cinema"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_button_in_account_info"
+                        android:drawableLeft="@drawable/explore2x"
+                        android:drawableRight="@drawable/arrow_right2x"
+                        android:drawableTint="@color/google_yellow"
+                        android:textAllCaps="false"
+                        android:text="Find the cinema closest to you"
+                        android:textColor="@color/white_grey"
+                        android:textSize="14sp">
+                    </Button>
+
+                    <Button
+                        android:id="@+id/button_wish_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_button_in_account_info"
+                        android:drawableLeft="@drawable/love2x"
+                        android:drawableRight="@drawable/arrow_right2x"
+                        android:drawableTint="@color/google_red"
+                        android:textAllCaps="false"
+                        android:text="My wish list"
+                        android:textColor="@color/white_grey"
+                        android:textSize="14sp">
+                    </Button>
+
+                    <Button
+                        android:id="@+id/button_gift"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_button_in_account_info"
+                        android:drawableLeft="@drawable/present2x"
+                        android:drawableRight="@drawable/arrow_right2x"
+                        android:drawableTint="@color/google_blue"
+                        android:textAllCaps="false"
+                        android:text="Gift"
+                        android:textColor="@color/white_grey"
+                        android:textSize="14sp">
+                    </Button>
+
+                    <Button
+                        android:id="@+id/button_donate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_button_in_account_info"
+                        android:drawableLeft="@drawable/box2x"
+                        android:drawableRight="@drawable/arrow_right2x"
+                        android:drawableTint="@color/google_green"
+                        android:textAllCaps="false"
+                        android:text="Donate"
+                        android:textColor="@color/white_grey"
+                        android:textSize="14sp">
+                    </Button>
+
+                    <Button
+                        android:id="@+id/button_community"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_button_in_account_info"
+                        android:drawableLeft="@drawable/community2x"
+                        android:drawableRight="@drawable/arrow_right2x"
+                        android:drawableTint="@color/google_yellow"
+                        android:textAllCaps="false"
+                        android:text="Community"
+                        android:textColor="@color/white_grey"
+                        android:textSize="14sp">
+                    </Button>
+
+                    <Button
+                        android:id="@+id/button_downloaded"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_button_in_account_info"
+                        android:drawableLeft="@drawable/download2x"
+                        android:drawableRight="@drawable/arrow_right2x"
+                        android:drawableTint="@color/orange_2"
+                        android:textAllCaps="false"
+                        android:text="Downloaded"
+                        android:textColor="@color/white_grey"
+                        android:textSize="14sp">
+                    </Button>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
